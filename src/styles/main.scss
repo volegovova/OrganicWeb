@@ -5,6 +5,11 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+
 body{
-	background-color: aqua;
+	font-family: 'Jost', sans-serif;
+}
+h2{
+	font-family: 'Cormorant', serif;
 }
