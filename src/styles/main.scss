@@ -6,92 +6,148 @@
 @import "base/general";
 @import "../blocks/modules";
 
-:root{
-	font-size: 16px;
+:root {
+  font-size: 16px;
 }
-body{
-	font-family: 'Jost', sans-serif;
-	color: $grey;
+body {
+  font-family: "Jost", sans-serif;
+  color: $grey;
 }
-.title{
-	font-family: 'Cormorant', serif;
-	font-size: 5rem;
-	line-height: 1;
-	span{
-		font-style: italic;
-	}
+.title {
+  font-family: "Cormorant", serif;
+  font-size: 5rem;
+  line-height: 1;
+  span {
+    font-style: italic;
+    margin-top: 6px;
+  }
 }
-.btn{
-	background-color: $orange;
-	color: $white;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 1.3rem 2.6rem;
-	border-radius: 1.87rem;
-	letter-spacing: 0.08rem;
-	box-shadow: 0px 10px 11.18px 1.82px rgba(207, 92, 13, 0.2);
+.ml {
+  margin-left: 7.6rem;
 }
-.wrapper{
-	max-width: 1440px;
-	margin: 0 auto;
-}
-.section-main{
-	background-image: url(../img/bg-1.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.main{
-display: flex;
-justify-content: space-between;
-align-items: center;
-	&-visual{
-		box-shadow:0 0 0 22px transparent, 0 0 0 1px rgba($grey, $alpha);
-		border-radius:100%;
-		padding: 53px;
-		position: relative;
-		&__image{
-			border-radius:100%;
-			border:1px solid rgba($grey, $alpha);
-			padding: 21px;
-			img{
-				border-radius:100%;
-				box-shadow:15px 48px 42px 0 rgba($grey, $alpha)
-			}
-		}
-		&__btn{
-			background-color:transparent;
-			border: none;
-			color: rgba($grey,0.8);
-			text-align: left;
-			
-			span{
-				color: rgba($grey,1);
-				display: block;
-			}
-			&::before{
-				content: '';
-				display: block;
-				width: 11px;
-				height: 11px;
-				border-radius:100%;
-				background-color:$grey;
-				box-shadow: 0 0 0 4px $white, 0 0 0 5px $grey;
 
-			}
-		}
-	}
-	&-text{
-		flex:0 0 40%;
-		&__description{
-			font-size: 1.12rem;
-			line-height: 1.5;
-			margin-top: 3.75rem;
-			margin-bottom: 4.81rem;
-		}
-	}
+.btn {
+  background-color: $orange;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.3rem 2.6rem;
+  border-radius: 1.87rem;
+  letter-spacing: 0.08rem;
+  box-shadow: 0px 10px 11.18px 1.82px rgba(207, 92, 13, 0.2);
 }
-.ml{
-	margin-left: 7.6rem;
-	
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section-main {
+  background-image: url(../img/bg-1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  &__image {
+    position: absolute;
+  }
+  &__tomato {
+    right: 236px;
+  }
+  &__avocado {
+    top: 50px;
+    right: 100px;
+  }
+  &__beans {
+    bottom: -37px;
+    left: 115px;
+  }
+  &__pepper {
+    top: 397px;
+    left: 153px;
+  }
+  &__cucumber {
+    top: 0;
+    left: 809px;
+  }
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-text {
+    flex: 0 0 40%;
+    &__description {
+      font-size: 1.12rem;
+      line-height: 1.5;
+      margin-top: 3.75rem;
+      margin-bottom: 4.81rem;
+    }
+  }
+  &-visual {
+    box-shadow: 0 0 0 22px transparent, 0 0 0 1px rgba($grey, $alpha);
+    border-radius: 100%;
+    padding: 53px;
+    position: relative;
+    &__image {
+      border-radius: 100%;
+      border: 1px solid rgba($grey, $alpha);
+      padding: 21px;
+      img {
+        border-radius: 100%;
+        box-shadow: 15px 48px 42px 0 rgba($grey, $alpha);
+      }
+    }
+    &__btn {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      color: rgba($grey, 0.8);
+      text-align: left;
+      span {
+        color: rgba($grey, 1);
+        display: block;
+        margin-top: 4px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 11px;
+        height: 11px;
+        position: absolute;
+        border-radius: 100%;
+        background-color: $grey;
+        box-shadow: 0 0 0 4px $white, 0 0 0 5px $grey;
+      }
+      &:focus {
+        outline: none;
+        &::before {
+          background-color: $orange;
+          box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+        }
+      }
+    }
+    &__01 {
+      left: 54px;
+      top: 45px;
+      &::before {
+        left: 92px;
+        top: 23px;
+      }
+    }
+    &__02 {
+      top: 191px;
+      right: -3px;
+      &::before {
+        top: 19px;
+        right: 94px;
+      }
+    }
+    &__03 {
+      bottom: -46px;
+      right: 235px;
+      &::before {
+        bottom: 54px;
+        right: 41px;
+      }
+    }
+  }
 }
