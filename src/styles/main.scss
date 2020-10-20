@@ -49,6 +49,7 @@ align-items: center;
 		box-shadow:0 0 0 22px transparent, 0 0 0 1px rgba($grey, $alpha);
 		border-radius:100%;
 		padding: 53px;
+		position: relative;
 		&__image{
 			border-radius:100%;
 			border:1px solid rgba($grey, $alpha);
@@ -56,6 +57,27 @@ align-items: center;
 			img{
 				border-radius:100%;
 				box-shadow:15px 48px 42px 0 rgba($grey, $alpha)
+			}
+		}
+		&__btn{
+			background-color:transparent;
+			border: none;
+			color: rgba($grey,0.8);
+			text-align: left;
+			
+			span{
+				color: rgba($grey,1);
+				display: block;
+			}
+			&::before{
+				content: '';
+				display: block;
+				width: 11px;
+				height: 11px;
+				border-radius:100%;
+				background-color:$grey;
+				box-shadow: 0 0 0 4px $white, 0 0 0 5px $grey;
+
 			}
 		}
 	}
