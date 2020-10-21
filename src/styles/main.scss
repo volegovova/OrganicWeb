@@ -12,6 +12,7 @@
 body {
   font-family: "Jost", sans-serif;
   color: $grey;
+  overflow-x: hidden;
 }
 .title {
   font-family: "Cormorant", serif;
@@ -39,34 +40,38 @@ body {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .section-main {
   background-image: url(../img/bg-1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 208px;
   position: relative;
   &__image {
     position: absolute;
   }
   &__tomato {
-    right: 236px;
+	right: 4px;
+	bottom: 133px;
   }
   &__avocado {
     top: 50px;
-    right: 100px;
+    right: -126px;
   }
   &__beans {
     bottom: -37px;
-    left: 115px;
+    left: 0;
   }
   &__pepper {
-    top: 397px;
-    left: 153px;
+    top: 40%;
+	left: 100px;
   }
   &__cucumber {
     top: 0;
-    left: 809px;
+    left: 572px;
   }
 }
 .main {
@@ -149,5 +154,19 @@ body {
         right: 41px;
       }
     }
+  }
+}
+// Второй экран
+
+.section-stock{
+	background-image: url(../img/bg-2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__text{
+	  font-size: 1.5rem;
+	  max-width: 690px;
+	  margin-top: 3.56rem;
+	  line-height: 1.5;
   }
 }
