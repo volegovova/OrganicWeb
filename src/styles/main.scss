@@ -44,8 +44,6 @@ body {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .section-main {
   background-image: url(../img/bg-1.png);
@@ -177,9 +175,12 @@ body {
 }
 // Слайдер на втором экране
 .slider {
-  display: flex;
   margin-top: 96px;
-  justify-content: space-between;
+  &-child {
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
   &-milk {
     background: url(../img/stock/milk.png);
   }
@@ -192,7 +193,6 @@ body {
   &-item {
     border: 1px solid rgba($grey, $alpha);
     border-radius: 20px;
-    flex: 0 0 32.3%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -203,7 +203,8 @@ body {
     overflow: hidden;
     box-shadow: 0 0 0 2px rgba($grey, 0);
     &:hover {
-      box-shadow: 0 0 0 2px rgba($grey, $alpha);
+      border: 3px solid rgba($grey, $alpha);
+      // box-shadow: 0 0 0 2px rgba($grey, $alpha);
     }
     &:hover {
       .slider-text {
@@ -231,7 +232,7 @@ body {
     position: absolute;
     bottom: 44px;
     left: 39px;
-    transform: translate(0px, 239px);
+    transform: translate(0px, 266px);
     transition: 0.3s ease;
     max-width: 57%;
     &__link {
@@ -272,4 +273,30 @@ body {
       margin-bottom: 24px;
     }
   }
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: -30px;
+  background: none;
+  border: none;
+  text-indent: -9999px;
+  opacity: 40%;
+  transition: 0.5s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 100%;
+  }
+}
+.slick-prev {
+  background-image: url(../img/arrow-prev.svg);
+  right: 80px;
+  top: -70px;
+}
+.slick-next {
+  background-image: url(../img/arrow-next.svg);
+  right: 0;
+  top: -73px;
 }
